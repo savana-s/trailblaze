@@ -1,1 +1,2 @@
-React App that monitors Bitcoin trade value
+#React App that monitors Bitcoin trade value 
+#Toggle currency selector
