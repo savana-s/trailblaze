@@ -23,7 +23,7 @@ const Header = props => (
           target="_blank"
           href="https://www.coindesk.com/price/"
         >
-          Exchange Rate
+          ExchangeRate
         </a>
       </span>
     </div>
