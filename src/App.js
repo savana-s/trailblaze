@@ -19,7 +19,7 @@ class App extends Component {
     this.state = {
       historicalData: null,
       currency: "USD",
-      baseUrl: "https://api.coindesk.com/"
+      baseUrl: "https://api.coindesk.com/",
     };
     this.onCurrencySelect = this.onCurrencySelect.bind(this);
   }
@@ -32,16 +32,16 @@ class App extends Component {
     const { baseUrl, currency } = this.state;
 
     fetch(`${baseUrl}v1/bpi/historical/close.json?currency=${currency}`)
-      .then(response => response.json())
-      .then(historicalData => this.setState({ historicalData }))
-      .catch(e => e);
+      .then((response) => response.json())
+      .then((historicalData) => this.setState({ historicalData }))
+      .catch((e) => e);
   }
 
   formatChartData() {
     const { bpi } = this.state.historicalData;
 
     return {
-      labels: _.map(_.keys(bpi), date => moment(date).format("ll")),
+      labels: _.map(_.keys(bpi), (date) => moment(date).format("ll")),
       datasets: [
         {
           label: "Bitcoin",
@@ -62,9 +62,9 @@ class App extends Component {
           pointHoverBorderWidth: 2,
           pointRadius: 1,
           pointHitRadius: 10,
-          data: _.values(bpi)
-        }
-      ]
+          data: _.values(bpi),
+        },
+      ],
     };
   }
 
@@ -101,7 +101,7 @@ class App extends Component {
             {this.state.currency !== "USD" && (
               <div>
                 <a
-                  href="#"
+                  href="USD"
                   className="link"
                   onClick={() => this.setCurrency("USD")}
                   style={{ color: "black", fontSize: 16, fontFamily: "Bungee" }}

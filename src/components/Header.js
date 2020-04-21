@@ -1,6 +1,6 @@
 import React from "react";
 
-const Header = props => (
+const Header = (props) => (
   <header style={{ marginBottom: 10 }}>
     <div>
       <span className="header"> {props.title} </span>
@@ -13,6 +13,7 @@ const Header = props => (
         <a
           className="link"
           target="_blank"
+          rel="noreferrer"
           href="https://github.com/savana-s/trailblaze"
         >
           GitHub
@@ -21,6 +22,7 @@ const Header = props => (
         <a
           className="link"
           target="_blank"
+          rel="noreferrer"
           href="https://www.coindesk.com/price/"
         >
           Exchange Rate
